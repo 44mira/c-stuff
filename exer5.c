@@ -3,8 +3,6 @@
 #include <string.h>
 
 #define BUFFER_SIZE 100
-#define EXIT 1
-#define CONTINUE 0
 #define TRUE 1
 #define FALSE 0
 
@@ -32,17 +30,17 @@ int main(void) {
       scanf("%s", buffer);
 
       if (strcmp(buffer, "no") == 0) {
-        exit_flag = EXIT;
+        exit_flag = TRUE;
         break;
       } else if (strcmp(buffer, "yes") == 0) {
-        exit_flag = CONTINUE;
+        exit_flag = FALSE;
         break;
       };
 
       printf("Invalid input, type either yes or no!");
     }
 
-  } while (exit_flag == CONTINUE);
+  } while (exit_flag);
 
   return 0;
 }
