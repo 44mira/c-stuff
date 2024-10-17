@@ -84,6 +84,6 @@ void toPigLatin(char *src, char *dest) {
   // Move the first consonant cluster to the end of the string, and then append
   // "ay"
   dest = strncpy(dest, src + i, BUFFER_SIZE);
-  strncat(dest, consonant_buffer, i);
+  strncat(dest, consonant_buffer, i + 5);
   strncat(dest, "ay", 5);
 }
